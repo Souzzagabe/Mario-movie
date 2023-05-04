@@ -23,20 +23,27 @@ main {
     column-gap: 32px;
 }
 
-.main-info div a, .main-info div button {
-width: 100%;
-padding: 10px 0;
-border-radius: 3px;
-font-size: 16px;
-font-weight: 300;    
-text-align: center;
-text-transform: uppercase;
-letter-spacing: 0.3;
-transform: skew(-10deg);
+.main-info div a,
+.main-info div button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3;
+    transform: skew(-10deg);
 }
 
 .main-info div a {
     background: var(--red);
+}
+
+.main-info div a:hover {
+    color: var(--red);
+    background: white;
+    transition: 0.5s ease;
 }
 
 .main-info div button {
@@ -44,41 +51,64 @@ transform: skew(-10deg);
     border: 1px solid var(--green);
 }
 
+.main-info div button:hover{
+    color: green;
+    background: white;
+    transition: 0.5s ease;
+}
+
 /* RESPONSIVIDADE */
 
-@media (max-width: 1450px){
+@media (max-width: 900px) {
     main {
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-.main-info{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    .main-info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main-info img {
+        width: 200px;
+    }
+
+    .main-info p {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    .main-info div {
+        column-gap: 16px;
+    }
+
+    .mario-luigi {
+        display: none;
+    }
+
+    .main-info div a,
+    .main-info div button {
+        font-size: 16px;
+        width: 160px;
+    }
 }
 
-.main-info img {
-    width: 200px;
-}
+@media (min-width: 900px) and (max-width: 1450px) {
+    header {
+        padding: 20px;
+    }
 
-.main-info p {
-    font-size: 16px;
-    padding: 20px;
-}
+    .mario-luigi img {
+        width: 400px;
+        margin-right: 30px;
+    }
 
-.main-info div {
-    column-gap: 16px;
-}
+    .main-info {
+        padding-left: 20px;
+    }
 
-.mario-luigi {
-    display: none;
-}
-
-.main-info div a, .main-info div button {
-    font-size: 16px;
-    width: 160px;
-}
 }
